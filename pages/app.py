@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import UnstructuredFileLoader
@@ -37,6 +38,10 @@ uploaded_file = st.file_uploader("Upload a text file", type=["txt"])
 
 # 파일이 업로드되면 처리 및 벡터화
 if uploaded_file:
+    # 데이터 디렉토리 생성
+    os.makedirs("./data", exist_ok=True)
+
+    # 파일 저장
     document_path = f"./data/{uploaded_file.name}"
     with open(document_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
@@ -67,4 +72,3 @@ if uploaded_file:
 
 else:
     st.write("Please upload a document to start.")
-
