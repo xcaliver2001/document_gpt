@@ -51,7 +51,7 @@ if uploaded_file:
     docs = loader.load_and_split(text_splitter=splitter)
 
     # 임베딩 및 벡터 저장소 설정
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     cached_embeddings = CacheBackedEmbeddings.from_bytes_store(embeddings, cached_dir)
     vectorstore = FAISS.from_documents(docs, cached_embeddings)
 
