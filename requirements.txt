@@ -241,3 +241,6 @@ yarl==1.9.2
 zipp==3.16.2
 setuptools>=67.0
 pip>=24.3.1
+wheel
+build
+cmake>=3.25.0
