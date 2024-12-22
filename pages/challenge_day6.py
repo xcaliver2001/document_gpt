@@ -17,11 +17,6 @@ def load_openai_api_key():
         return api_key
     return None
 
-# Initialize the OpenAI model
-llm = ChatOpenAI(
-    temperature=0.1,
-    openai_api_key=api_key
-)
 # Define the prompt for answering the user's question
 answers_prompt = ChatPromptTemplate.from_template(
     """
@@ -161,6 +156,12 @@ with st.sidebar:
     # Load OpenAI API key
     api_key = load_openai_api_key()
     st.markdown("[GitHub Repository](https://github.com/your-repository-link)")
+
+# Initialize the OpenAI model
+llm = ChatOpenAI(
+    temperature=0.1,
+    openai_api_key=api_key
+)
 
 # Handling sitemap and querying
 if url:
