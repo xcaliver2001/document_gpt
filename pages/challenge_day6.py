@@ -20,6 +20,7 @@ def load_openai_api_key():
 # Initialize the OpenAI model
 llm = ChatOpenAI(
     temperature=0.1,
+    openai_api_key=api_key
 )
 
 # Define the prompt for answering the user's question
