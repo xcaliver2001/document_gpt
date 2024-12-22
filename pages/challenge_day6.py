@@ -22,7 +22,6 @@ llm = ChatOpenAI(
     temperature=0.1,
     openai_api_key=api_key
 )
-
 # Define the prompt for answering the user's question
 answers_prompt = ChatPromptTemplate.from_template(
     """
