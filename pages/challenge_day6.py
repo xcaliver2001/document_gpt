@@ -4,10 +4,10 @@ from langchain.prompts import ChatPromptTemplate
 import streamlit as st
 import os
 
-from langchain_community.document_loaders import SitemapLoader
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OpenAIEmbeddings
-from langchain_community.chat_models import ChatOpenAI
+from langchain.document_loaders import SitemapLoader
+from langchain.vectorstores import FAISS
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.chat_models import ChatOpenAI
 
 # Function to load the OpenAI API key
 def load_openai_api_key():
