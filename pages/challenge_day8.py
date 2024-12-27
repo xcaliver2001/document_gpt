@@ -15,7 +15,7 @@ api_key = st.sidebar.text_input("Enter your OpenAI API Key:", type="password")
 
 st.sidebar.write("### GitHub Repository")
 st.sidebar.markdown(
-    "[View on GitHub](https://github.com/your-repository-link)",
+    "[View on GitHub](https://github.com/xcaliver2001/document_gpt/blob/main/pages/challenge_day8.py)",
     unsafe_allow_html=True,
 )
 
